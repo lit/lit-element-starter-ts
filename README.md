@@ -52,7 +52,7 @@ npm run serve
 
 Linting of TypeScript files is provided by [ESLint](eslint.org) and [TypeScript ESLint](https://github.com/typescript-eslint/typescript-eslint). In addition, [lit-analyzer](https://www.npmjs.com/package/lit-analyzer) is used to type-check and lint lit-html templates.
 
-The rules are mostly the reccomended rules from each project, but some have been turned off to make LitElement usage easier. The reccomended rules are pretty strict, so you may want to relax them by editing `.eslintrc.json` and `tsconfig.json`.
+The rules are mostly the recommended rules from each project, but some have been turned off to make LitElement usage easier. The recommended rules are pretty strict, so you may want to relax them by editing `.eslintrc.json` and `tsconfig.json`.
 
 To lint the project run:
 
