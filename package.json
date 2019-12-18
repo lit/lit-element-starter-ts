@@ -25,6 +25,9 @@
     "lit-element": "^2.2.1"
   },
   "devDependencies": {
+    "@open-wc/semantic-dom-diff": "^0.15.4",
+    "@open-wc/testing": "^2.4.2",
+    "@open-wc/testing-helpers": "^1.4.0",
     "@open-wc/testing-karma": "^3.2.19",
     "@types/chai": "^4.2.7",
     "@types/mocha": "^5.2.7",
