@@ -15,7 +15,7 @@
 import { LitElement, html, customElement, property, css } from 'lit-element';
 
 @customElement('my-element')
-class MyElement extends LitElement {
+export class MyElement extends LitElement {
 
   static styles = css`
     :host {
