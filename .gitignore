@@ -3,7 +3,7 @@
 /test/
 
 # top level source
-my-element.js
-my-element.js.map
-my-element.d.ts
-my-element.d.ts.map
+build/
+
+# OSX
+.DS_Store
