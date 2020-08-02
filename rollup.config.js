@@ -12,13 +12,13 @@
  * http://polymer.github.io/PATENTS.txt
  */
 
-import filesize from 'rollup-plugin-filesize';
-import {terser} from 'rollup-plugin-terser';
-import resolve from 'rollup-plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
+import filesize from 'rollup-plugin-filesize';
+import resolve from 'rollup-plugin-node-resolve';
+import {terser} from 'rollup-plugin-terser';
 
 export default {
-  input: 'my-element.js',
+  input: 'dist/my-element.js',
   output: {
     file: 'my-element.bundled.js',
     format: 'esm',
