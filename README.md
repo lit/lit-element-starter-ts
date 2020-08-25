@@ -105,7 +105,7 @@ To watch the site files, and re-build automatically, run:
 npm run docs:watch
 ```
 
-The site will usually be served at http://localhost:8000.
+The site will usually be served at http://localhost:8000/dev.
 
 ## Bundling and minification
 
