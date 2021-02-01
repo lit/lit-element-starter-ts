@@ -1,4 +1,5 @@
 {
+  "root": true,
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
@@ -9,14 +10,14 @@
     "ecmaVersion": 2020,
     "sourceType": "module"
   },
-  "plugins": ["eslint-plugin-no-only-tests", "@typescript-eslint"],
+  "plugins": ["@typescript-eslint"],
   "env": {
     "browser": true
   },
   "rules": {
     "no-prototype-builtins": "off",
-    "no-only-tests/no-only-tests": "error",
     "@typescript-eslint/ban-types": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-explicit-any": "error",
     "@typescript-eslint/no-empty-function": "off",
@@ -30,14 +31,7 @@
   },
   "overrides": [
     {
-      "files": [
-        "packages/localize/bin/lit-localize.js",
-        "check-version-tracker.js",
-        "karma.conf.js",
-        "rollup-common.js",
-        "rollup.config.js",
-        "web-test-runner.config.js"
-      ],
+      "files": ["rollup.config.js", "web-test-runner.config.js"],
       "env": {
         "node": true
       }
