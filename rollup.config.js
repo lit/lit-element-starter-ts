@@ -20,7 +20,7 @@ import {terser} from 'rollup-plugin-terser';
 export default {
   input: 'dist/my-element.js',
   output: {
-    file: 'my-element.bundled.js',
+    file: 'dist/my-element.bundled.js',
     format: 'esm',
   },
   onwarn(warning) {
