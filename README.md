@@ -40,7 +40,7 @@ npm test
 
 ## Dev Server
 
-This sample uses open-wc's [es-dev-server](https://github.com/open-wc/open-wc/tree/master/packages/es-dev-server) for previewing the project without additional build steps. ES dev server handles resolving Node-style "bare" import specifiers, which aren't supported in browsers. It also automatically transpiles JavaScript and adds polyfills to support older browsers.
+This sample uses open-wc's [web-dev-server](https://github.com/modernweb-dev/web/tree/master/packages/dev-server) for previewing the project without additional build steps. Web dev server handles resolving Node-style "bare" import specifiers, which aren't supported in browsers. It also automatically transpiles JavaScript and adds polyfills to support older browsers.
 
 To run the dev server and open the project in a new browser tab:
 
