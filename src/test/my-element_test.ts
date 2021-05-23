@@ -6,6 +6,9 @@
 
 import {MyElement} from '../my-element.js';
 
+// needed in order to guarantee MyElement gets defined.
+import '../my-element.js';
+
 import {fixture, html} from '@open-wc/testing';
 
 const assert = chai.assert;
