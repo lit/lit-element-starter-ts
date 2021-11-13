@@ -45,7 +45,7 @@ npm test
 For local testing during development, the `test:dev:watch` command will run your tests in Lit's development mode (with verbose errors) on every change to your source files:
 
 ```bash
-npm test:watch
+npm run test:watch
 ```
 
 Alternatively the `test:prod` and `test:prod:watch` commands will run your tests in Lit's production mode.
