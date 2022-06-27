@@ -63,6 +63,12 @@ To run the dev server and open the project in a new browser tab:
 npm run serve
 ```
 
+To run the server and build Typescript with watch simultaneously:
+
+```bash
+npm run serve:dev
+```
+
 There is a development HTML file located at `/dev/index.html` that you can view at http://localhost:8000/dev/index.html. Note that this command will serve your code using Lit's development mode (with more verbose errors). To serve your code against Lit's production mode, use `npm run serve:prod`.
 
 ## Editing
