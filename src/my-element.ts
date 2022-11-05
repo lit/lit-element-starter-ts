@@ -29,7 +29,7 @@ export class MyElement extends LitElement {
    * The name to say "Hello" to.
    */
   @property()
-  name = 'World';
+  name = 'Racers X, Y & Z';
 
   /**
    * The number of times the button has been clicked.
