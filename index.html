@@ -5,8 +5,8 @@
       body {
         --background-color: #13294B;
         --font-color: #ffffff;
-        --font-size: 56px;
-        --stroke-width: 3px;
+        --font-size: 48px;
+        --stroke-width: 2px;
         --stroke-color: #FF3006;
 
         height: 100vh;
@@ -32,36 +32,43 @@
       const pattern = document.querySelector("repeat-pattern");
 
       function onChars(e) {
+        console.log('Char = ', e.target.value);
         if (!(e.target instanceof HTMLInputElement)) return;
         pattern.chars = e.target.value
       }
 
       function onNumPrints(e) {
+        console.log('NumPrints = ', e.target.value);
         if (!(e.target instanceof HTMLInputElement)) return;
         pattern.numPrints = e.target.valueAsNumber;
       }
 
       function onRotationOffset(e) {
+        console.log('RotationOffset = ', e.target.value);
         if (!(e.target instanceof HTMLInputElement)) return;
         pattern.rotationOffset = e.target.valueAsNumber;
       }
 
       function onTextSize(e) {
+        console.log('TextSize = ', e.target.value, 'px');
         if (!(e.target instanceof HTMLInputElement)) return;
         pattern.style.setProperty("--font-size", e.target.value + "px");
       }
 
       function onBackgroundColor(e) {
+        console.log('BackgroundColor = ', e.target.value);
         if (!(e.target instanceof HTMLInputElement)) return;
         body.style.setProperty("--background-color", e.target.value);
       }
 
       function onStrokeColor(e) {
+        console.log('StrokeColor = ', e.target.value);
         if (!(e.target instanceof HTMLInputElement)) return;
         body.style.setProperty("--stroke-color", e.target.value);
       }
 
       function onTextColor(e) {
+        console.log('TextColor = ', e.target.value);
         if (!(e.target instanceof HTMLInputElement)) return;
         body.style.setProperty("--font-color", e.target.value);
       }
@@ -79,13 +86,20 @@
   <body>
     <repeat-pattern chars="I" num-prints="8"></repeat-pattern>
     <div class="knobs">
-      <input value="I">
-      <input type="range" min="2" max="29" value="8">
-      <input type="range" min="0" max="360" value="0">
-      <input type="range" min="10" max="128" value="24">
-      <input type="color" value="#7acbf1">
-      <input type="color" value="#FF3006">
-      <input type="color" value="#ffffff">
+      <label for="char">Char: </label>
+      <input id="char" value="I">
+      <label for="number">Number: </label>
+      <input id="number" type="range" min="2" max="29" value="8">
+      <label for="rotation">Rotation: </label>
+      <input id="rotation" type="range" min="0" max="360" value="0">
+      <label for="size">Size: </label>
+      <input id="size" type="range" min="10" max="128" value="48">
+      <label for="bkgd">Bkgd: </label>
+      <input id="bkgd" type="color" value="#13294B">
+      <label for="stroke">Stroke: </label>
+      <input id="stroke" type="color" value="#FF3006">
+      <label for="fill">Fill: </label>
+      <input id="fill" type="color" value="#ffffff">
     </div>
   </body>
 </html>
