@@ -1,11 +1,92 @@
 <!DOCTYPE html>
-
 <html>
   <head>
-    <meta charset="utf-8" />
-    <title>Lit Starter Kit</title>
+    <style>
+      body {
+        --background-color: #13294B;
+        --font-color: #ffffff;
+        --font-size: 56px;
+        --stroke-width: 3px;
+        --stroke-color: #FF3006;
+
+        height: 100vh;
+        margin: 0;
+      }
+
+      repeat-pattern {
+        height: 100vh;
+        width: 100vw;
+      }
+
+      .knobs {
+        background: #efefef;
+        border-bottom-right-radius: 4px;
+        padding: 8px;
+        position: absolute;
+        top: 0;
+      }
+    </style>
+    <script type="module" src="repeat-pattern.js"></script>
+    <script type="module">
+      const body = document.querySelector("body");
+      const pattern = document.querySelector("repeat-pattern");
+
+      function onChars(e) {
+        if (!(e.target instanceof HTMLInputElement)) return;
+        pattern.chars = e.target.value
+      }
+
+      function onNumPrints(e) {
+        if (!(e.target instanceof HTMLInputElement)) return;
+        pattern.numPrints = e.target.valueAsNumber;
+      }
+
+      function onRotationOffset(e) {
+        if (!(e.target instanceof HTMLInputElement)) return;
+        pattern.rotationOffset = e.target.valueAsNumber;
+      }
+
+      function onTextSize(e) {
+        if (!(e.target instanceof HTMLInputElement)) return;
+        pattern.style.setProperty("--font-size", e.target.value + "px");
+      }
+
+      function onBackgroundColor(e) {
+        if (!(e.target instanceof HTMLInputElement)) return;
+        body.style.setProperty("--background-color", e.target.value);
+      }
+
+      function onStrokeColor(e) {
+        if (!(e.target instanceof HTMLInputElement)) return;
+        body.style.setProperty("--stroke-color", e.target.value);
+      }
+
+      function onTextColor(e) {
+        if (!(e.target instanceof HTMLInputElement)) return;
+        body.style.setProperty("--font-color", e.target.value);
+      }
+
+      const inputs = document.querySelectorAll("input")
+      inputs[0].addEventListener("input", onChars);
+      inputs[1].addEventListener("input", onNumPrints);
+      inputs[2].addEventListener("input", onRotationOffset);
+      inputs[3].addEventListener("input", onTextSize);
+      inputs[4].addEventListener("input", onBackgroundColor);
+      inputs[5].addEventListener("input", onStrokeColor);
+      inputs[6].addEventListener("input", onTextColor);
+    </script>
   </head>
   <body>
-    <a href="/dev/index.html">Component Demo</a>
+    <repeat-pattern chars="I" num-prints="8"></repeat-pattern>
+    <div class="knobs">
+      <input value="I">
+      <input type="range" min="2" max="29" value="8">
+      <input type="range" min="0" max="360" value="0">
+      <input type="range" min="10" max="128" value="24">
+      <input type="color" value="#7acbf1">
+      <input type="color" value="#FF3006">
+      <input type="color" value="#ffffff">
+    </div>
   </body>
 </html>
+
