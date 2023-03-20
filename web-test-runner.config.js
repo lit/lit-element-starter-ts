@@ -4,7 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {legacyPlugin} from '@web/dev-server-legacy';
+import { legacyPlugin } from '@web/dev-server-legacy';
+import { esbuildPlugin } from '@web/dev-server-esbuild';
 import {playwrightLauncher} from '@web/test-runner-playwright';
 
 const mode = process.env.MODE || 'dev';
@@ -91,7 +92,7 @@ try {
 // https://modern-web.dev/docs/test-runner/cli-and-configuration/
 export default {
   rootDir: '.',
-  files: ['./test/**/*_test.js'],
+  files: ['./src/test/**/*_test.ts'],
   nodeResolve: {exportConditions: mode === 'dev' ? ['development'] : []},
   preserveSymlinks: true,
   browsers: commandLineBrowsers ?? Object.values(browsers),
@@ -119,6 +120,10 @@ export default {
           },
         ],
       },
+    }),
+    esbuildPlugin({
+      ts: true,
+      target: 'es2020',
     }),
   ],
 };
