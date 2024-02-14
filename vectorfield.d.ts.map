@@ -1,0 +1,1 @@
+{"version":3,"file":"vectorfield.d.ts","sourceRoot":"","sources":["src/vectorfield.ts"],"names":[],"mappings":"AAAA,OAAO,EAAC,UAAU,EAAY,MAAM,KAAK,CAAC;AAI1C,qBACa,kBAAmB,SAAQ,UAAU;IAChD,OAAO,CAAC,IAAI,CAA4C;IAExD,OAAO,CAAC,KAAK,CAAO;IAEpB,gBAAyB,MAAM,0BAS7B;IAEO,MAAM;IAIN,iBAAiB;IAMjB,oBAAoB;IAK7B,OAAO,CAAC,gBAAgB;IAkBxB,OAAO,CAAC,MAAM;CAiDf"}

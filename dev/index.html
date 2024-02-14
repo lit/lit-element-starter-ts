@@ -1,22 +1,46 @@
 <!DOCTYPE html>
-
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>&lt;my-element> Demo</title>
-    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
-    <script src="../node_modules/lit/polyfill-support.js"></script>
-    <script type="module" src="../my-element.js"></script>
-    <style>
+    <head>
+        <meta charset="utf-8">
+        <title>&lt;my-element> Demo</title>
+        <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+        <script src="../node_modules/lit/polyfill-support.js"></script>
+        <script type="module" src="../my-element.js"></script>
+        <script type="module" src="../canvas.js"></script>
+        <script type="module" src="../vectorfield.js"></script>
+        <style>
       p {
         border: solid 1px blue;
         padding: 8px;
       }
-    </style>
-  </head>
-  <body>
-    <my-element>
-      <p>This is child content</p>
-    </my-element>
-  </body>
+        </style>
+    </head>
+    <body>
+        <css-canvas>
+            <img
+                src="https://lit.dev/images/logo.svg"
+                alt="Lit Logo"
+                width="500"
+                height="333"
+                style="--dx: 59.4909px; --dy: 32.8429px"
+            >
+            <svg width="400" height="110" style="--dx: 230.057px; --dy: 33.6257px">
+                <rect width="400" height="100" style="fill: rgb(0, 0, 255); stroke-width: 3; stroke: rgb(0, 0, 0)"/>
+            </svg>
+            <svg height="100" width="100">
+                <circle
+                    cx="50"
+                    cy="50"
+                    r="40"
+                    stroke="black"
+                    stroke-width="3"
+                    fill="red"
+                />
+            </svg>
+        </css-canvas>
+        <my-element>
+            <p>This is child content</p>
+        </my-element>
+        <vector-canvas></vector-canvas>
+    </body>
 </html>
