@@ -58,13 +58,13 @@ more information.
 Tests can be run with the `test` script, which will run your tests against Lit's development mode (with more verbose errors) as well as against Lit's production mode:
 
 ```bash
-npm test
+npm run test
 ```
 
 For local testing during development, the `test:dev:watch` command will run your tests in Lit's development mode (with verbose errors) on every change to your source files:
 
 ```bash
-npm test:watch
+npm run test:watch
 ```
 
 Alternatively the `test:prod` and `test:prod:watch` commands will run your tests in Lit's production mode.
@@ -79,7 +79,7 @@ To run the dev server and open the project in a new browser tab:
 npm run serve
 ```
 
-There is a development HTML file located at `/dev/index.html` that you can view at http://localhost:8000/dev/index.html. Note that this command will serve your code using Lit's development mode (with more verbose errors). To serve your code against Lit's production mode, use `npm run serve:prod`.
+There is a development HTML file located at `/dev/index.html` that you can view at <http://localhost:8000/dev/index.html>. Note that this command will serve your code using Lit's development mode (with more verbose errors). To serve your code against Lit's production mode, use `npm run serve:prod`.
 
 ## Editing
 
@@ -137,7 +137,7 @@ To watch the site files, and re-build automatically, run:
 npm run docs:gen:watch
 ```
 
-The site will usually be served at http://localhost:8000.
+The site will usually be served at <http://localhost:8000>.
 
 **Note**: The project uses Rollup to bundle and minify the source code for the docs site and not to publish to NPM. For bundling and minification, check the [Bundling and minification](#bundling-and-minification) section.
 
