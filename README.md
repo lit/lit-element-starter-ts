@@ -102,7 +102,7 @@ npm run docs:serve
 To watch the site files, and re-build automatically, run:
 
 ```bash
-npm run docs:watch
+npm run docs:gen:watch
 ```
 
 The site will usually be served at http://localhost:8000.
