@@ -28,6 +28,7 @@ Install dependencies:
 
 ```bash
 npm i
+npx playwright install # For `npm test`
 ```
 
 ## Build
