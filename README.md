@@ -137,7 +137,7 @@ To watch the site files, and re-build automatically, run:
 npm run docs:gen:watch
 ```
 
-The site will usually be served at http://localhost:8000.
+The site will usually be served at http://localhost:8000/dev.
 
 **Note**: The project uses Rollup to bundle and minify the source code for the docs site and not to publish to NPM. For bundling and minification, check the [Bundling and minification](#bundling-and-minification) section.
 
