@@ -6,6 +6,7 @@
  */
 
 import {legacyPlugin} from '@web/dev-server-legacy';
+import { esbuildPlugin } from '@web/dev-server-esbuild';
 
 const mode = process.env.MODE || 'dev';
 if (!['dev', 'prod'].includes(mode)) {
@@ -16,6 +17,15 @@ export default {
   nodeResolve: {exportConditions: mode === 'dev' ? ['development'] : []},
   preserveSymlinks: true,
   plugins: [
+    esbuildPlugin({
+      js: true,
+      jsx: true,
+      ts: true,
+      tsx: true,
+      jsxFactory: 'React.createElement',
+      jsxFragment: 'Fragment',
+      target: 'es2020',
+    }),
     legacyPlugin({
       polyfills: {
         // Manually imported in index.html file
